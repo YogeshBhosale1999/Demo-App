@@ -1,1 +1,11 @@
-
+name : Manual Workflow
+on:
+  workflow_dispatch:
+jobs:
+  manual_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a script
+        run: echo "This is a manual workflow triggered by workflow_dispatch event."
